@@ -1,0 +1,66 @@
+/* Specific styles for liste_contrat.php */
+
+/* Table specific styles */
+.liste_contrat th:nth-child(1), .liste_contrat td:nth-child(1) {
+  width: 12%;
+}
+
+.liste_contrat th:nth-child(2), .liste_contrat td:nth-child(2) {
+  width: 20%;
+}
+
+.liste_contrat th:nth-child(3), .liste_contrat td:nth-child(3) {
+  width: 15%;
+}
+
+.liste_contrat th:nth-child(4), .liste_contrat td:nth-child(4) {
+  width: 12%;
+}
+
+.liste_contrat th:nth-child(5), .liste_contrat td:nth-child(5) {
+  width: 12%;
+}
+
+.liste_contrat th:nth-child(6), .liste_contrat td:nth-child(6) {
+  width: 10%;
+}
+
+.liste_contrat th:nth-child(7), .liste_contrat td:nth-child(7) {
+  width: 100%;
+}
+
+/* Status styling */
+.liste_contrat td:nth-child(6) span {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.liste_contrat td:nth-child(6) span:contains('En cours') {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.liste_contrat td:nth-child(6) span:contains('Expiré') {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Enhanced action buttons */
+.actionBtn a.editItem[title="Nouveau sinistre"] {
+  color: var(--warning);
+}
+
+.actionBtn a.editItem[title="Nouveau sinistre"]:hover {
+  background-color: var(--warning);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .liste_contrat th:nth-child(3), .liste_contrat td:nth-child(3),
+  .liste_contrat th:nth-child(5), .liste_contrat td:nth-child(5) {
+    display: none;
+  }
+}

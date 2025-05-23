@@ -1,0 +1,90 @@
+/* Styles specific to the register page */
+body{
+  /* background-image: url(../img/executive-correcting-report.jpg);
+  background-size: cover;
+  background-color: #ffffff2b;
+  background-blend-mode: overlay;
+  backdrop-filter: blur(5px); */
+}
+.form {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form h1 {
+  color: var(--primary);
+  border-bottom: 2px solid rgba(229, 231, 235, 0.5);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.5rem;
+}
+
+.inputContainer label b {
+  margin-left: var(--spacing-xs);
+}
+
+.inputContainer input[type="file"] {
+  padding: var(--spacing-md);
+  background-color: rgba(249, 250, 251, 0.7);
+}
+
+.inputContainer input[type="file"]::-webkit-file-upload-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  margin-right: var(--spacing-md);
+  transition: background-color var(--transition-fast);
+}
+
+.inputContainer input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.submitbtn {
+  margin-top: var(--spacing-lg);
+  height: 50px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.submitbtn:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-dark) 100%);
+}
+
+/* Error messages styling */
+.error-message {
+  color: var(--danger);
+  font-size: 0.75rem;
+  margin-top: var(--spacing-xs);
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--danger);
+}
+
+/* Alert box styling */
+.alert {
+  background: rgba(14, 165, 233, 0.15);
+  backdrop-filter: var(--blur-sm);
+  -webkit-backdrop-filter: var(--blur-sm);
+  max-width: 900px;
+  border-left: 4px solid var(--info);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form h1 {
+    grid-column: span 1;
+    font-size: 1.25rem;
+  }
+  
+  .alert {
+    padding: var(--spacing-md);
+  }
+}

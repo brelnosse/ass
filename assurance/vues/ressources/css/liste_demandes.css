@@ -1,0 +1,71 @@
+/* Specific styles for liste_demandes.php */
+
+/* Table specific styles */
+#liste_demande th:nth-child(1), #liste_demande td:nth-child(1) {
+  width: 12%;
+}
+
+#liste_demande th:nth-child(2), #liste_demande td:nth-child(2),
+#liste_demande th:nth-child(3), #liste_demande td:nth-child(3) {
+  width: 10%;
+}
+
+#liste_demande th:nth-child(4), #liste_demande td:nth-child(4) {
+  width: 15%;
+}
+
+#liste_demande th:nth-child(5), #liste_demande td:nth-child(5) {
+  width: 10%;
+}
+
+#liste_demande th:nth-child(6), #liste_demande td:nth-child(6),
+#liste_demande th:nth-child(7), #liste_demande td:nth-child(7) {
+  width: 12%;
+}
+
+#liste_demande th:nth-child(8), #liste_demande td:nth-child(8) {
+  width: 10%;
+}
+
+#liste_demande th:nth-child(9), #liste_demande td:nth-child(9) {
+  width: 100%;
+}
+
+/* Status indicators */
+.status-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.status-active {
+  background-color: var(--success);
+}
+
+.status-pending {
+  background-color: var(--warning);
+}
+
+.status-expired {
+  background-color: var(--danger);
+}
+
+/* Enhanced action buttons */
+.actionBtn a.editItem[title="nouveau contrat"] {
+  color: var(--success);
+}
+
+.actionBtn a.editItem[title="nouveau contrat"]:hover {
+  background-color: var(--success);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  #liste_demande th:nth-child(4), #liste_demande td:nth-child(4),
+  #liste_demande th:nth-child(7), #liste_demande td:nth-child(7) {
+    display: none;
+  }
+}

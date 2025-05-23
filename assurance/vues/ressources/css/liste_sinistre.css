@@ -1,0 +1,60 @@
+/* Specific styles for liste_sinistre.php */
+
+/* Table specific styles */
+#liste_sinistre th:nth-child(1), #liste_sinistre td:nth-child(1) {
+  width: 12%;
+}
+
+#liste_sinistre th:nth-child(2), #liste_sinistre td:nth-child(2) {
+  width: 18%;
+}
+
+#liste_sinistre th:nth-child(3), #liste_sinistre td:nth-child(3) {
+  width: 12%;
+}
+
+#liste_sinistre th:nth-child(4), #liste_sinistre td:nth-child(4) {
+  width: 10%;
+}
+
+#liste_sinistre th:nth-child(5), #liste_sinistre td:nth-child(5) {
+  width: 12%;
+}
+
+#liste_sinistre th:nth-child(6), #liste_sinistre td:nth-child(6) {
+  width: 12%;
+}
+
+#liste_sinistre th:nth-child(7), #liste_sinistre td:nth-child(7) {
+  width: 10%;
+}
+
+#liste_sinistre th:nth-child(8), #liste_sinistre td:nth-child(8) {
+  width: 9%;
+}
+
+/* Status styling */
+#liste_sinistre td:nth-child(7) span {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+#liste_sinistre td:nth-child(7) span:contains('En cours') {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+#liste_sinistre td:nth-child(7) span:contains('Traité') {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  #liste_sinistre th:nth-child(3), #liste_sinistre td:nth-child(3),
+  #liste_sinistre th:nth-child(5), #liste_sinistre td:nth-child(5) {
+    display: none;
+  }
+}

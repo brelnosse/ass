@@ -1,0 +1,202 @@
+/* Styles for notification component */
+
+.notif-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding:0 1.2rem;
+  }
+  
+  .notif {
+    display: block;
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    color: var(--gray-800);
+    border-left: 4px solid var(--primary);
+  }
+  
+  .notif:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .notif-head {
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .notif-head h3 {
+    color: var(--primary);
+    font-size: var(--text-xl);
+    margin: 0;
+  }
+  
+  .notif p {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--gray-700);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .notif ul {
+    padding-left: var(--spacing-xl);
+    margin-top: var(--spacing-md);
+  }
+  
+  .notif li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-700);
+    list-style-type: none;
+  }
+  
+  .notif .badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--gray-100);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+  
+  /* Different notification types */
+  .notif.urgent {
+    border-left-color: var(--danger);
+  }
+  
+  .notif.urgent .notif-head h3 {
+    color: var(--danger);
+  }
+  
+  .notif.warning {
+    border-left-color: var(--warning);
+  }
+  
+  .notif.warning .notif-head h3 {
+    color: var(--warning);
+  }
+  
+  .notif.success {
+    border-left-color: var(--success);
+  }
+  
+  .notif.success .notif-head h3 {
+    color: var(--success);
+  }
+  
+  /* Notification with actions */
+  .notif-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--gray-200);
+  }
+  
+  .notif-actions .btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: none;
+    font-size: var(--text-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .notif-actions .btn.primary {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .notif-actions .btn.primary:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .notif-actions .btn.secondary {
+    background-color: var(--gray-200);
+    color: var(--gray-700);
+  }
+  
+  .notif-actions .btn.secondary:hover {
+    background-color: var(--gray-300);
+  }
+  
+  /* Unread notification indicator */
+  .notif.unread::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+  }
+  
+  /* Empty state */
+  .notif-empty {
+    text-align: center;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .notif-empty i {
+    font-size: 3rem;
+    color: var(--gray-400);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .notif-empty h3 {
+    color: var(--gray-700);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .notif-empty p {
+    color: var(--gray-500);
+  }
+  
+  /* Multiple notifications */
+  .notif-group {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .notif-group-title {
+    font-size: var(--text-lg);
+    color: var(--gray-700);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--gray-300);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .notif {
+      padding: var(--spacing-md);
+    }
+    
+    .notif-head h3 {
+      font-size: var(--text-lg);
+    }
+    
+    .notif-actions {
+      flex-direction: column;
+    }
+    
+    .notif-actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
